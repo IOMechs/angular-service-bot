@@ -2,5 +2,170 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "angular-service-bot": {
+      "projectType": "library",
+      "root": "projects/angular-service-bot",
+      "sourceRoot": "projects/angular-service-bot/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/angular-service-bot/tsconfig.lib.json",
+            "project": "projects/angular-service-bot/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/angular-service-bot/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-service-bot/src/test.ts",
+            "tsConfig": "projects/angular-service-bot/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-service-bot/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/angular-service-bot/tsconfig.lib.json",
+              "projects/angular-service-bot/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "asb-demo": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/asb-demo",
+      "sourceRoot": "projects/asb-demo/src",
+      "prefix": "asb",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/asb-demo",
+            "index": "projects/asb-demo/src/index.html",
+            "main": "projects/asb-demo/src/main.ts",
+            "polyfills": "projects/asb-demo/src/polyfills.ts",
+            "tsConfig": "projects/asb-demo/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/asb-demo/src/favicon.ico",
+              "projects/asb-demo/src/assets"
+            ],
+            "styles": [
+              "projects/asb-demo/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/asb-demo/src/environments/environment.ts",
+                  "with": "projects/asb-demo/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "asb-demo:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "asb-demo:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "asb-demo:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/asb-demo/src/test.ts",
+            "polyfills": "projects/asb-demo/src/polyfills.ts",
+            "tsConfig": "projects/asb-demo/tsconfig.spec.json",
+            "karmaConfig": "projects/asb-demo/karma.conf.js",
+            "assets": [
+              "projects/asb-demo/src/favicon.ico",
+              "projects/asb-demo/src/assets"
+            ],
+            "styles": [
+              "projects/asb-demo/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/asb-demo/tsconfig.app.json",
+              "projects/asb-demo/tsconfig.spec.json",
+              "projects/asb-demo/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/asb-demo/e2e/protractor.conf.js",
+            "devServerTarget": "asb-demo:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "asb-demo:serve:production"
+            }
+          }
+        }
+      }
+    }},
+  "cli": {
+    "analytics": false
+  },
+  "defaultProject": "angular-service-bot"
 }
