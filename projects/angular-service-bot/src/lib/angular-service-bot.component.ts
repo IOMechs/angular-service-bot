@@ -1,20 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input } from '@angular/core';
+import { AngularServiceBotService } from './angular-service-bot.service';
+import { ServiceBotParams } from './interface/service-bot-params';
 
 @Component({
   selector: 'lib-angular-service-bot',
   template: `
-    <p>
-      angular-service-bot works!
-    </p>
+    <div>
+      <div id="servicebot-subscription-portal"></div>
+    </div>
   `,
-  styles: [
-  ],
 })
-export class AngularServiceBotComponent implements OnInit {
+export class AngularServiceBotComponent implements AfterViewInit {
 
-  constructor() { }
+  @Input() public serviceBotParams: ServiceBotParams;
 
-  ngOnInit(): void {
+  constructor(
+    private bot: AngularServiceBotService,
+  ) { }
+
+  public ngAfterViewInit() {
+    this.bot.initServiceBot(this.serviceBotParams);
   }
 
 }
