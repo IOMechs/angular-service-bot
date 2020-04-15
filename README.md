@@ -1,27 +1,59 @@
-# AngularServiceBot
+# Angular Service Bot Package
+##### @iomechs/angular-service-bot
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+[![Actions Status](https://github.com/iomechs/angular-service-bot/workflows/CI/badge.svg)](https://github.com/iomechs/angular-service-bot/actions)
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<a href="https://www.npmjs.com/package/@iomechs/angular-service-bot"><img src="https://img.shields.io/npm/v/@iomechs/angular-service-bot.svg" alt="npm version" ></a>
+<a href="https://www.npmjs.com/package/@iomechs/angular-service-bot"><img src="https://img.shields.io/github/stars/IOMechs/angular-service-bot.svg?style=social&label=Star&style=flat-square" alt="github stars" ></a>
+<a href="https://www.npmjs.com/package/@iomechs/angular-service-bot"><img src="https://img.shields.io/npm/l/@iomechs/angular-service-bot.svg?style=flat-square" alt="license" ></a>
 
-## Code scaffolding
+<a href="https://www.npmjs.com/package/@iomechs/angular-service-bot"><img src="https://img.shields.io/npm/dt/@iomechs/angular-service-bot.svg?style=flat-square" alt="npm downloads total" ></a>
+<a href="https://www.npmjs.com/package/ngx-device-detector"><img src="https://img.shields.io/npm/dm/@iomechs/angular-service-bot.svg" alt="npm downloads/month" ></a>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+A simple, easily to use package to use [servicebot.io](https://www.servicebot.io/) with Angular apps.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Demo
 
-## Running unit tests
+[https://iomechs.github.io/angular-service-bot/demo](https://iomechs.github.io/angular-service-bot/demo)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Docs
 
-## Running end-to-end tests
+[https://iomechs.github.io/angular-service-bot](https://iomechs.github.io/angular-service-bot)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Dependencies
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Usage
+
+Install the package in your project's folder by using npm or yarn:
+```bash
+npm install @iomechs/angular-service-bot --save
+
+# OR
+
+yarn add @iomechs/angular-service-bot -S
+```
+
+Import AngularServiceBotModule in your AppModule as below:
+
+```typescript
+import { AngularServiceBotModule } from '@iomechs/angular-service-bot';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    AngularServiceBotModule, // <-- here
+  ]
+});
+```
+
+## License
+
+MIT © [IOMechs](https://github.com/IOmechs)

@@ -100,6 +100,35 @@
                   "maximumError": "10kb"
                 }
               ]
+            }, "ci": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/asb-demo/src/environments/environment.ts",
+                  "with": "projects/asb-demo/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputPath": "docs/demo",
+              "baseHref": "/angular-service-bot/demo/",
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
             }
           }
         },
