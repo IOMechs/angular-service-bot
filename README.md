@@ -6,10 +6,10 @@
 
 <a href="https://www.npmjs.com/package/@iomechs/angular-service-bot"><img src="https://img.shields.io/npm/v/@iomechs/angular-service-bot.svg" alt="npm version" ></a>
 <a href="https://www.npmjs.com/package/@iomechs/angular-service-bot"><img src="https://img.shields.io/github/stars/IOMechs/angular-service-bot.svg?style=social&label=Star&style=flat-square" alt="github stars" ></a>
-<a href="https://www.npmjs.com/package/@iomechs/angular-service-bot"><img src="https://img.shields.io/npm/l/@iomechs/angular-service-bot.svg?style=flat-square" alt="license" ></a>
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <a href="https://www.npmjs.com/package/@iomechs/angular-service-bot"><img src="https://img.shields.io/npm/dt/@iomechs/angular-service-bot.svg?style=flat-square" alt="npm downloads total" ></a>
-<a href="https://www.npmjs.com/package/ngx-device-detector"><img src="https://img.shields.io/npm/dm/@iomechs/angular-service-bot.svg" alt="npm downloads/month" ></a>
+<a href="https://www.npmjs.com/package/@iomechs/angular-service-bot"><img src="https://img.shields.io/npm/dm/@iomechs/angular-service-bot.svg" alt="npm downloads/month" ></a>
 
 
 A simple, easily to use package to use [servicebot.io](https://www.servicebot.io/) with Angular apps.

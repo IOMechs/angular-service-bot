@@ -63,6 +63,34 @@
 
 
 
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#initServiceBot">initServiceBot</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
 
             <section>
     <h3 id="constructor">Constructor</h3>
@@ -75,7 +103,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">projects/angular-service-bot/src/lib/angular-service-bot.service.ts:6</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">projects/angular-service-bot/src/lib/angular-service-bot.service.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -83,20 +111,116 @@
         </table>
 </section>
 
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initServiceBot"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            initServiceBot
+                        </b>
+                        <a href="#initServiceBot"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>initServiceBot(serviceBotParams: <a href="../interfaces/ServiceBotParams.html">ServiceBotParams</a>)</code>
+                </td>
+            </tr>
 
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="12"
+                            class="link-to-prism">projects/angular-service-bot/src/lib/angular-service-bot.service.ts:12</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>serviceBotParams</td>
+                                    <td>
+                                                <code><a href="../interfaces/ServiceBotParams.html" target="_self" >ServiceBotParams</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
 
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { ServiceBotParams } from &#x27;./interface/service-bot-params&#x27;;
+declare var window;
 
 @Injectable({
-  providedIn: &#x27;root&#x27;
+  providedIn: &#x27;root&#x27;,
 })
 export class AngularServiceBotService {
 
   constructor() { }
+
+  public initServiceBot(serviceBotParams: ServiceBotParams) {
+    window.servicebotSettings &#x3D; serviceBotParams;
+    const scriptText &#x3D; &#x60;
+      (function () {
+        var s &#x3D; document.createElement(&#x27;script&#x27;);
+        s.src &#x3D; &#x27;https://js.servicebot.io/embeds/servicebot-billing-settings-embed.js&#x27;;
+        s.async &#x3D; true; s.type &#x3D; &#x27;text/javascript&#x27;;
+        var x &#x3D; document.getElementsByTagName(&#x27;script&#x27;)[0];
+        x.parentNode.insertBefore(s, x);
+      })();
+    &#x60;;
+    const scriptTag &#x3D; document.createElement(&#x27;script&#x27;);
+    scriptTag.type &#x3D; &#x27;text/javascript&#x27;;
+    scriptTag.text &#x3D; scriptText;
+    document.body.appendChild(scriptTag);
+  }
 }
 </code></pre>
     </div>

@@ -1,6 +1,6 @@
 {
   "name": "angular-service-bot-workspace",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -15,9 +15,9 @@
     "copy:readme": "cp ./README.md projects/angular-service-bot/",
     "copy:license": "cp ./LICENSE projects/angular-service-bot/",
     "copy:demo:ci": "cp -R dist/asb-demo ./docs/demo",
-    "pre-release": "npm run clean && npm run lint && npm run copy:readme && npm run copy:license && npm run build:lib && npm run test:lib && npm run docs:build",
-    "publish:lib": "npm publish dist/angular-service-bot --access public",
+    "pre-release": "npm run clean && npm run lint && npm run copy:readme && npm run copy:license && npm run build:lib && npm run docs:build",
     "release": "npm run pre-release && npm run publish:lib",
+    "publish:lib": "npm publish dist/angular-service-bot --access public",
     "test": "ng test",
     "clean": "rm -rf dist",
     "lint": "ng lint",
