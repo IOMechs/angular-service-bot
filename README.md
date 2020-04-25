@@ -89,6 +89,7 @@ In your template:
   <io-angular-service-bot [serviceBotParams]="serviceBotParams"></io-angular-service-bot>
 </div>
 ```
+For further details related service bot params visit [service bot params details](https://docs.servicebot.io/subscription-portal/pricing-page/pricing-page-configuration) page.
 
 ## License
 
