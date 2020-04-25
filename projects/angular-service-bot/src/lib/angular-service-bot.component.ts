@@ -3,7 +3,7 @@ import { AngularServiceBotService } from './angular-service-bot.service';
 import { ServiceBotParams } from './interface/service-bot-params';
 
 @Component({
-  selector: 'lib-angular-service-bot',
+  selector: 'io-angular-service-bot',
   template: `
     <div>
       <div id="servicebot-subscription-portal"></div>

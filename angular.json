@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/angular-service-bot",
       "sourceRoot": "projects/angular-service-bot/src",
-      "prefix": "lib",
+      "prefix": "io",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",

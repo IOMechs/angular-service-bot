@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  title = 'asb-demo';
   public serviceBotParams = {
     servicebot_id: 'E0OQN0P0Dort',  // LIVE & TEST MODE IDs ARE DIFFERENT
     service: 'Flat Subscription',
