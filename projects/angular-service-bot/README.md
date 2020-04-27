@@ -54,6 +54,43 @@ import { AngularServiceBotModule } from '@iomechs/angular-service-bot';
 });
 ```
 
+In your component:
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'asb-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+})
+
+export class AppComponent {
+
+  serviceBotParams = {
+    servicebot_id: 'E0OQN0P0Dort',  // LIVE & TEST MODE IDs ARE DIFFERENT
+    service: 'Flat Subscription',
+    email: 'test@gmail.com',
+    handleResponse: async (payload) => {
+      if (payload.event === 'create_subscription') {
+        console.log('Response Object ', payload.response);
+      }
+    }
+  };
+
+  constructor() {}
+}
+```
+
+In your template:
+
+```html
+<div class="angular-service-bot">
+  <io-angular-service-bot [serviceBotParams]="serviceBotParams"></io-angular-service-bot>
+</div>
+```
+For further details related service bot params visit [service bot params details](https://docs.servicebot.io/subscription-portal/pricing-page/pricing-page-configuration) page.
+
 ## License
 
 MIT © [IOMechs](https://github.com/IOmechs)

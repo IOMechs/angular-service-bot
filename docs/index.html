@@ -64,7 +64,34 @@ yarn add &#64;iomechs/angular-service-bot -S</code></pre></div><p>Import Angular
     BrowserAnimationsModule,
     AngularServiceBotModule, // &lt;-- here
   ]
-});</code></pre></div><h2 id="license">License</h2>
+});</code></pre></div><p>In your component:</p>
+<div><pre class="line-numbers"><code class="language-typescript">import { Component } from &#39;&#64;angular/core&#39;;
+
+&#64;Component({
+  selector: &#39;asb-root&#39;,
+  templateUrl: &#39;./app.component.html&#39;,
+  styleUrls: [&#39;./app.component.scss&#39;],
+})
+
+export class AppComponent {
+
+  serviceBotParams = {
+    servicebot_id: &#39;E0OQN0P0Dort&#39;,  // LIVE &amp; TEST MODE IDs ARE DIFFERENT
+    service: &#39;Flat Subscription&#39;,
+    email: &#39;test&#64;gmail.com&#39;,
+    handleResponse: async (payload) =&gt; {
+      if (payload.event === &#39;create_subscription&#39;) {
+        console.log(&#39;Response Object &#39;, payload.response);
+      }
+    }
+  };
+
+  constructor() {}
+}</code></pre></div><p>In your template:</p>
+<div><pre class="line-numbers"><code class="language-html">&lt;div class=&quot;angular-service-bot&quot;&gt;
+  &lt;io-angular-service-bot [serviceBotParams]=&quot;serviceBotParams&quot;&gt;&lt;/io-angular-service-bot&gt;
+&lt;/div&gt;</code></pre></div><p>For further details related service bot params visit <a href="https://docs.servicebot.io/subscription-portal/pricing-page/pricing-page-configuration">service bot params details</a> page.</p>
+<h2 id="license">License</h2>
 <p>MIT © <a href="https://github.com/IOmechs">IOMechs</a></p>
 
 

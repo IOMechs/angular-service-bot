@@ -1,6 +1,6 @@
 {
   "name": "angular-service-bot-workspace",
-  "version": "0.1.1",
+  "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -14,16 +14,28 @@
     "test:lib": "ng test angular-service-bot --watch false",
     "copy:readme": "cp ./README.md projects/angular-service-bot/",
     "copy:license": "cp ./LICENSE projects/angular-service-bot/",
+    "copy:changelog": "cp ./CHANGELOG.md projects/angular-service-bot/",
     "copy:demo:ci": "cp -R dist/asb-demo ./docs/demo",
-    "pre-release": "npm run clean && npm run lint && npm run copy:readme && npm run copy:license && npm run build:lib && npm run docs:build",
+    "pre-release": "npm run lint && npm run copy:readme && npm run copy:license && npm run build:lib && npm run docs:build && npm run changelog",
     "release": "npm run pre-release && npm run publish:lib",
     "publish:lib": "npm publish dist/angular-service-bot --access public",
+    "changelog": "./node_modules/.bin/conventional-changelog -p angular -k projects/angular-service-bot/package.json -i CHANGELOG.md -s && git add CHANGELOG.md",
     "test": "ng test",
     "clean": "rm -rf dist",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "deploy": "ng deploy asb-demo --base-href=/angular-service-bot/"
   },
+  "keywords": [
+    "iomechs",
+    "angular",
+    "servicebot",
+    "service-bot",
+    "servicebot.io",
+    "angular servicebot",
+    "angular-service-bot",
+    "ng-service-bot"
+  ],
   "license": "MIT",
   "private": false,
   "dependencies": {
@@ -36,6 +48,7 @@
     "@angular/platform-browser-dynamic": "~9.1.0",
     "@angular/router": "~9.1.0",
     "@iomechs/angular-service-bot": "^0.1.1",
+    "conventional-changelog-cli": "^2.0.31",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
