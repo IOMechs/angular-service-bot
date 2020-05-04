@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { AngularServiceBotComponent } from './angular-service-bot.component';
+import { AngularServiceBotService } from './angular-service-bot.service';
 
 
 
@@ -7,6 +8,7 @@ import { AngularServiceBotComponent } from './angular-service-bot.component';
   declarations: [AngularServiceBotComponent],
   imports: [
   ],
-  exports: [AngularServiceBotComponent]
+  exports: [AngularServiceBotComponent],
+  providers: [AngularServiceBotService]
 })
 export class AngularServiceBotModule { }
