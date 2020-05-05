@@ -35,6 +35,11 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </a>
                         </li>
                         <li class="link">
+                            <a href="changelog.html"  data-type="chapter-link">
+                                <span class="icon ion-ios-paper"></span>CHANGELOG
+                            </a>
+                        </li>
+                        <li class="link">
                             <a href="license.html"  data-type="chapter-link">
                                 <span class="icon ion-ios-paper"></span>LICENSE
                             </a>
@@ -60,19 +65,34 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/AngularServiceBotModule.html" data-type="entity-link">AngularServiceBotModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-AngularServiceBotModule-ef2dbfaff93f327ad6d16ffab3861db8"' : 'data-target="#xs-components-links-module-AngularServiceBotModule-ef2dbfaff93f327ad6d16ffab3861db8"' }>
+                                            'data-target="#components-links-module-AngularServiceBotModule-f9001a9b396b6aacdf24176444ac0c3a"' : 'data-target="#xs-components-links-module-AngularServiceBotModule-f9001a9b396b6aacdf24176444ac0c3a"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AngularServiceBotModule-ef2dbfaff93f327ad6d16ffab3861db8"' :
-                                            'id="xs-components-links-module-AngularServiceBotModule-ef2dbfaff93f327ad6d16ffab3861db8"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AngularServiceBotModule-f9001a9b396b6aacdf24176444ac0c3a"' :
+                                            'id="xs-components-links-module-AngularServiceBotModule-f9001a9b396b6aacdf24176444ac0c3a"' }>
                                             <li class="link">
                                                 <a href="components/AngularServiceBotComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">AngularServiceBotComponent</a>
                                             </li>
                                         </ul>
                                     </li>
+                                <li class="chapter inner">
+                                    <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                        'data-target="#injectables-links-module-AngularServiceBotModule-f9001a9b396b6aacdf24176444ac0c3a"' : 'data-target="#xs-injectables-links-module-AngularServiceBotModule-f9001a9b396b6aacdf24176444ac0c3a"' }>
+                                        <span class="icon ion-md-arrow-round-down"></span>
+                                        <span>Injectables</span>
+                                        <span class="icon ion-ios-arrow-down"></span>
+                                    </div>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-AngularServiceBotModule-f9001a9b396b6aacdf24176444ac0c3a"' :
+                                        'id="xs-injectables-links-module-AngularServiceBotModule-f9001a9b396b6aacdf24176444ac0c3a"' }>
+                                        <li class="link">
+                                            <a href="injectables/AngularServiceBotService.html"
+                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>AngularServiceBotService</a>
+                                        </li>
+                                    </ul>
+                                </li>
                             </li>
                 </ul>
                 </li>
