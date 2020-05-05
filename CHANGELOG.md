@@ -1,3 +1,21 @@
+## [0.1.3](https://github.com/IOMechs/angular-service-bot/compare/v0.1.2...v0.1.3) (2020-05-05)
+
+
+### Bug Fixes
+
+* **service-bot-module:** fix the service issue in service bot ([#5](https://github.com/IOMechs/angular-service-bot/issues/5)) ([339b62a](https://github.com/IOMechs/angular-service-bot/commit/339b62a88cb1d65933d79df8e5a024846a0ee00e))
+
+
+
+## [0.1.3](https://github.com/IOMechs/angular-service-bot/compare/v0.1.2...v0.1.3) (2020-05-05)
+
+
+### Bug Fixes
+
+* **service-bot-module:** fix the service issue in service bot ([#5](https://github.com/IOMechs/angular-service-bot/issues/5)) ([339b62a](https://github.com/IOMechs/angular-service-bot/commit/339b62a88cb1d65933d79df8e5a024846a0ee00e))
+
+
+
 ## [0.1.2](https://github.com/AhsanAyaz/angular-service-bot/compare/v0.1.1...v0.1.2) (2020-04-27)
 
 
